@@ -26,17 +26,3 @@ class BankAccount:
     def print_customer_information(self) -> None:
         print("At " + self.bank_title + ", " + self.customer_name + " has a balance of " + str(self.current_balance) +
               ", and their account has a minimum balance of " + str(self.minimum_balance));
-
-
-
-
-Jane = BankAccount("Jane Doe", 4000, 500)
-Jane.print_customer_information()
-Jane.withdraw(3000)
-Jane.print_customer_information()
-Jane.withdraw(600)
-
-Dickie = BankAccount("Dick Nixon", 0, 0)
-Dickie.print_customer_information()
-Dickie.deposit(10000000000000000000000000000000)
-Dickie.print_customer_information()

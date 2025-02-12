@@ -6,9 +6,13 @@ class CheckingAccount(BankAccount):
         self.transfer_limit = transfer_limit
 
     def transfer(self, other: BankAccount, amount: float) -> bool:
-        if self.withdraw(amount):
-            other.deposit(amount)
-            return True
+        if amount <= self.transfer_limit:
+            if self.withdraw(amount):
+                other.deposit(amount)
+                return True
+            else:
+                print('Insufficient funds to transfer')
+                return False
         else:
-            print('Insufficient funds to transfer')
+            print(f'Transfer limit (${self.transfer_limit:.2f}) exceeded. Transaction failed')
             return False

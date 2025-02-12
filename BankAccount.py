@@ -6,7 +6,7 @@ class BankAccount:
         self.current_balance = current_balance
         self.minimum_balance = minimum_balance
         self.__account_number = account_number
-        self._routing_number = routing_numer
+        self._routing_number = routing_number
 
 
     def deposit(self, dep):

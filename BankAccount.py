@@ -17,12 +17,11 @@ class BankAccount:
 
     def withdraw(self, wd) -> bool:
             if self.current_balance - wd < self.minimum_balance:
-                print("Error withdrawing $" + str(wd) + " from an account with $" + str(self.current_balance) + ": remaining balance would be below minimum balance!")
+                print(f"Error withdrawing ${wd:.2f} from an account with ${self.current_balance:.2f}: remaining balance would be below minimum balance of ${self.minimum_balance:.2f}!")
                 return False
             else:
                 self.current_balance -= wd
                 return True
 
     def print_customer_information(self) -> None:
-        print("At " + self.bank_title + ", " + self.customer_name + " has a balance of " + str(self.current_balance) +
-              ", and their account has a minimum balance of " + str(self.minimum_balance));
+        print(f"At {self.bank_title}, {self.customer_name} has a balance of ${self.current_balance:.2f}, and their account has a minimum balance of ${self.minimum_balance:.2f}");

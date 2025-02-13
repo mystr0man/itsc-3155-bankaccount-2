@@ -16,3 +16,7 @@ class CheckingAccount(BankAccount):
         else:
             print(f'Transfer limit (${self.transfer_limit:.2f}) exceeded. Transaction failed')
             return False
+    
+    def print_customer_information(self) -> None:
+        super()
+        print(f"As a checkings account, their account has a transfer limit of {self.transfer_limit}")

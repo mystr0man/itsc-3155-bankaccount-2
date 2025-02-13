@@ -25,3 +25,4 @@ class BankAccount:
 
     def print_customer_information(self) -> None:
         print(f"At {self.bank_title}, {self.customer_name} has a balance of ${self.current_balance:.2f}, and their account has a minimum balance of ${self.minimum_balance:.2f}");
+        print(f"They also have a routing number of {self._routing_number} and an account number of {self.__account_number}")
